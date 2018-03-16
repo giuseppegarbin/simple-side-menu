@@ -1361,7 +1361,6 @@ template {
   clear: both;
 }
 html {
-  font-family: 'Roboto', sans-serif;
   font-size: 16px;
 }
 @media screen and (min-width: 600px) {
@@ -1386,6 +1385,9 @@ html {
 }
 body {
   color: #444444;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+  font-weight: 400;
 }
 h1,
 h2,
@@ -1420,4 +1422,105 @@ p,
 ol,
 ul {
   font-size: 1em;
+}
+body {
+  margin: auto;
+  background: #f4f7f6;
+  overflow-x: hidden;
+}
+#wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  background: #f4f7f6;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+}
+#wrapper:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+#wrapper.nav__box--open {
+  position: fixed;
+  -webkit-transform: translateX(320px);
+  transform: translateX(320px);
+}
+#wrapper.nav__box--open:before {
+  opacity: 1;
+  visibility: visible;
+}
+#wrapper #nav__box {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 320px;
+  height: 100vh;
+  background: #eeeeee;
+  overflow-y: auto;
+  -webkit-transform: translateX(-320px);
+  transform: translateX(-320px);
+}
+#wrapper #nav__bar {
+  height: 70px;
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #dedede;
+  position: relative;
+}
+#wrapper #nav__bar #nav__icon {
+  position: absolute;
+  display: block;
+  width: 70px;
+  height: 70px;
+  border-right: 1px solid #dedede;
+}
+#wrapper #nav__bar #nav__icon #nav__icon--svg {
+  display: block;
+  width: 16px;
+  height: 13px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+#wrapper #nav__bar #nav__icon #nav__icon--svg path {
+  fill: #444444;
+}
+#wrapper #nav__bar #nav__icon:hover #nav__icon--svg path {
+  fill: #eb2f06;
+}
+#wrapper #nav__bar #nav__logo {
+  position: absolute;
+  width: 100px;
+  height: 15px;
+  margin: calc(27.5px) 0;
+  padding: 0;
+  left: 50%;
+  margin-left: -50px;
+}
+#wrapper #nav__bar #nav__logo a {
+  width: 100px;
+  height: 15px;
+}
+#wrapper #nav__bar #nav__logo a svg {
+  width: 100px;
+  height: 15px;
+}
+#wrapper #nav__bar #nav__logo a svg path {
+  fill: #444444;
 }
