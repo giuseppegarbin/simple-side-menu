@@ -11,10 +11,10 @@ body {
     width: 100%;
     min-height: 100%;
     background: #f4f7f6;
-    -webkit-transition: -webkit-transform 0.5s ease-out;
-    transition: -webkit-transform 0.5s ease-out;
-    transition: transform 0.5s ease-out;
-    transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+    transition: -webkit-transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
 
     &:before {
         content: '';
@@ -28,8 +28,8 @@ body {
         z-index: 10;
         opacity: 0;
         visibility: hidden;
-        -webkit-transition: all 0.5s ease-out;
-        transition: all 0.5s ease-out;
+        -webkit-transition: all 0.3s ease-out;
+        transition: all 0.3s ease-out;
     }
     
     &.nav__box--open {
@@ -126,8 +126,9 @@ body {
                     padding: 25px @grid-padding;
                     font-weight: 700;
                     font-size: 1.1em;
-                    -webkit-transition: all 0.5s ease-out;
-                    transition: all 0.5s ease-out;
+                    color: @color-primary;
+                    -webkit-transition: all 0.3s ease-out;
+                    transition: all 0.3s ease-out;
                 }
 
                 span.nav_box--item-desc {
@@ -138,8 +139,8 @@ body {
                     margin-top: -15px;
                     font-size: 0.9em;
                     color: #444444;
-                    -webkit-transition: all 0.5s ease-out;
-                    transition: all 0.5s ease-out;
+                    -webkit-transition: all 0.3s ease-out;
+                    transition: all 0.3s ease-out;
                 }
 
                     &:before {
@@ -150,8 +151,8 @@ body {
                         width: 0;
                         height: 100%;
                         background-color: @color-primary;
-                        -webkit-transition: all 0.5s ease-out;
-                        transition: all 0.5s ease-out;
+                        -webkit-transition: all 0.3s ease-out;
+                        transition: all 0.3s ease-out;
                     }
 
                     &:hover {
